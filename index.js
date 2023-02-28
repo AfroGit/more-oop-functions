@@ -16,19 +16,36 @@
 
 /*Modify the function checkObj to test if an object passed to the function (obj) contains a specific property (checkProp). If the property is found, return that property's value. If not, return "Not Found". */ 
 
-function checkObj(obj, checkProp) {
+// function checkObj(obj, checkProp) {
   
-if (obj.hasOwnProperty(checkProp)){//We can use the .hasOwnProperty(propname) method of objects to determine if that object has the given property name.
+// if (obj.hasOwnProperty(checkProp)){//We can use the .hasOwnProperty(propname) method of objects to determine if that object has the given property name.
   
-  return obj[checkProp]
+//   return obj[checkProp]
 
-} else {
-  return "Not Found";
-}
+// } else {
+//   return "Not Found";
+// }
 
-};
+// };
 
 
 //console.log(checkObj({gift: "pony", pet: "kitten", bed: "sleigh"}, "gift"));
 
-// console.log(checkObj({gift: "pony", pet: "kitten", bed: "sleigh"}, "house"))
+// console.log(checkObj({gift: "pony", pet: "kitten", bed: "sleigh"}, "house"));
+
+/*Access the myStorage object and assign the contents of the glove box property to the gloveBoxContents variable. Use dot notation for all properties where possible, otherwise use bracket notation. */ 
+
+
+const myStorage = {
+  car: {
+    inside: {
+      "glove box": "maps",
+      "passenger seat": "crumbs"
+    },
+    outside: {
+      trunk: "jack"
+    }
+  }
+};
+const gloveBoxContents = myStorage.car.inside["glove box"];
+console.log(gloveBoxContents);
