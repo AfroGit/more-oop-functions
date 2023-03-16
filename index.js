@@ -81,21 +81,55 @@
 
 /*Define a function, checkInventory, which receives a scanned item as an argument. Return the current value of the scannedItem key in the foods object. You can assume that only valid keys will be provided as an argument to checkInventory. */ 
 
-let foods = {
-  apples: 25,
-  oranges: 32,
-  plums: 28,
-  bananas: 13,
-  grapes: 35,
-  strawberries: 27
-};
+// let foods = {
+//   apples: 25,
+//   oranges: 32,
+//   plums: 28,
+//   bananas: 13,
+//   grapes: 35,
+//   strawberries: 27
+// };
 
-function checkInventory(scannedItem) {
+// function checkInventory(scannedItem) {
   
-return foods[scannedItem];
+// return foods[scannedItem];
+  
+// }
+
+// console.log(checkInventory("apples"));
+
+//  for (let food in foods) {
+//   console.log(food);
+// }
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++
+// ---------------------------------------------------
+
+/*defined a function countOnline which accepts one argument (a users object). Use a for...in statement within this function to loop through the users object passed into the function and return the number of users whose online property is set to true. An example of a users object which could be passed to countOnline is shown below. Each user will have an online property with either a true or false value. */ 
+
+
+const users = {
+  Alan: {
+    online: false
+  },
+  Jeff: {
+    online: true
+  },
+  Sarah: {
+    online: false
+  }
+}
+
+function countOnline(usersObj) {
+  
+  let result = 0;//we need to return a result
+  for (let user in usersObj) {//iterate thro param object
+    if(usersObj[user].online === true){//use brackets to target each property
+      result++ }//calc the increments
+  console.log(user);
+}
+return result;//finally return the count 
   
 }
 
-console.log(checkInventory("apples"));
-
- 
+console.log(countOnline(users));
