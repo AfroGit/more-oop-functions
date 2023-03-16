@@ -54,24 +54,48 @@
 /*Using dot and bracket notation, set the variable secondTree to the second item in the trees list from the myPlants object. */ 
 
 
-const myPlants = [
-  {
-    type: "flowers",
-    list: [
-      "rose",
-      "tulip",
-      "dandelion"
-    ]
-  },
-  {
-    type: "trees",
-    list: [
-      "fir",
-      "pine",
-      "birch"
-    ]
-  }
-];
+// const myPlants = [
+//   {
+//     type: "flowers",
+//     list: [
+//       "rose",
+//       "tulip",
+//       "dandelion"
+//     ]
+//   },
+//   {
+//     type: "trees",
+//     list: [
+//       "fir",
+//       "pine",
+//       "birch"
+//     ]
+//   }
+// ];
 
-const secondTree = myPlants[1].list[1];
-console.log(secondTree);
+// const secondTree = myPlants[1].list[1];
+// console.log(secondTree);
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// ------------------------------------------------------
+
+/*Define a function, checkInventory, which receives a scanned item as an argument. Return the current value of the scannedItem key in the foods object. You can assume that only valid keys will be provided as an argument to checkInventory. */ 
+
+let foods = {
+  apples: 25,
+  oranges: 32,
+  plums: 28,
+  bananas: 13,
+  grapes: 35,
+  strawberries: 27
+};
+
+function checkInventory(scannedItem) {
+  
+return foods[scannedItem];
+  
+}
+
+console.log(checkInventory("apples"));
+
+ 
