@@ -133,3 +133,52 @@ return result;//finally return the count
 }
 
 console.log(countOnline(users));
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+const object = { 
+  a: 1, 
+  b: 2,
+  c: 3 
+};
+
+/*What this is essentially doing is, looping through variable
+"object" and assigning it's value into "key". So if you put a console.log inside the for...in loop, it will return every property.*/
+for (let key in object) {
+  console.log(key);
+}
+// This loop will log:
+// "a"
+// "b"
+// "c"
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++
+// -------------------------------------------------
+/* Write getArrayOfUsers function so that it returns an array containing all the properties in the object it receives as an argument. */ 
+
+let users = {
+  Alan: {
+    age: 27,
+    online: false
+  },
+  Jeff: {
+    age: 32,
+    online: true
+  },
+  Sarah: {
+    age: 48,
+    online: false
+  },
+  Ryan: {
+    age: 19,
+    online: true
+  }
+};
+
+function getArrayOfUsers(obj) {
+  
+   return Object.keys(obj)
+ 
+}
+
+console.log(getArrayOfUsers(users));
